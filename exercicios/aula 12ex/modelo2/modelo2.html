@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coloque o seu Sexo e sua Idade</title>
+    <link rel="stylesheet" href="/exercicios/aula 12ex/modelo2/style.css">
+    
+</head>
+<body>
+    <script src="/exercicios/aula 12ex/modelo2/script.js"></script>
+    <header><h1>Verificador de Idades</h1></header>
+    <section>
+        <div>
+            <input type="number" id="txtano" placeholder="Ano de Nascimento">
+            <p>Sexo
+                <input type="radio" name="radsex" id="mas" checked>
+                <label for="mas">Masculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Feminino</label>
+            </p>
+            <p><input type="button" value="verificar" onclick="verificar()" id="button"></p>
+        </div>
+        <div id="res"> 
+            <p>Preencha os dados acima para ver os resultados
+            </p>
+        </div>
+    </section>
+</body>
+</html>

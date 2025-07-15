@@ -1,0 +1,32 @@
+body{
+    background-color: #1a1a1a;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header{
+    color: white;
+    text-align: center;
+}
+section {
+    width: 600px;
+    height: 300px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: white;
+}
+#button{
+    padding: 10px;
+    border: none;
+    background-color: rgb(1, 8, 94);
+    color: white;
+    border-radius: 10px;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.726);
+}
+#txtano{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+#txtano:hover{
+    border: 1px solid rgb(1, 8, 94);
+}
