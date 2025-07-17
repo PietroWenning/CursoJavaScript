@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super contador
+    </title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Vamos Contar</h1>
+    </header>
+    <section>
+        <div id="dados">
+            <p>Comece por aqui
+                
+            </p><input type="number" id="numi"   placeholder="Inicio:">
+            <p>Coloque ate onde quer ir.</p>
+            <input type="number" id="numf" placeholder="Fim!:">
+            <p>A cada quantos passos ir?</p>
+            <input type="number" id="nump" placeholder="Passos:">
+            <input type="button" value="verificar" onclick="verificar()" id="button" >
+        </div>    
+        <div id="res">Preencha os dados acima para ver as contagens!</div>
+    </section>
+    <script>
+    function verificar() {
+      let ini = document.getElementById('numi');
+      let fim = document.getElementById('numf');
+      let passo = document.getElementById('nump');
+      let res = document.getElementById('res');
+
+      if (ini.value.length === 0 || fim.value.length === 0 || passo.value.length === 0) {
+        alert('[ERRO] Faltam dados!');
+        res.innerHTML = 'Impossível contar!';
+        return;
+      }
+
+      res.innerHTML = 'Contando: <br>';
+
+      let i = Number(ini.value);
+      let f = Number(fim.value);
+      let p = Number(passo.value);
+
+      if (p <= 0) {
+        alert('Passo inválido! Considerando PASSO 1');
+        p = 1;
+      }
+
+      if (i < f) {
+        // Contagem crescente
+        for (let c = i; c <= f; c += p) {
+          res.innerHTML += `${c} 👉 `;
+        }
+      } else {
+        // Contagem decrescente
+        for (let c = i; c >= f; c -= p) {
+          res.innerHTML += `${c} 👉 `;
+        }
+      }
+
+      res.innerHTML += `🏁`;
+    }
+    </script>
+</body>
+</html>
